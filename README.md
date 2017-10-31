@@ -24,7 +24,7 @@ sudo python -c "import nltk; nltk.download('stopwords')"
 A simple use of the library
 
 ```py
-from keyword_extractor import *
+from keyword_extractor import cleaner
 
 docs=[
     "Ancora allarme dopo la tensione di ieri con il test della bomba a idrogeno da parte della Corea del Nord. La Corea del Sud ha - infatti - registrato segnali relativi alla preparazione di un nuovo lancio di missile balistico.",
