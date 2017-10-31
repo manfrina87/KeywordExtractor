@@ -7,11 +7,14 @@ A Python library to extract keywords from text ,filtering by POS tag and lemmati
 ### Install Treetagger + python-treetagger
 1. Install [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/);
 2. Edit your ```~/.bashrc``` file, adding the ```treetagger/cmd``` path: 
+
 ```sh
 nano ~/.bashrc 
 export TREETAGGER_HOME='/path/to/your/TreeTagger/cmd/'
 ```
+
 3. Install NLTK and its data:
+
 ```sh
 sudo pip install nltk
 sudo python -c "import nltk; nltk.download('punkt')"
