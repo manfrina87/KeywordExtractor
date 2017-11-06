@@ -54,7 +54,6 @@ def hapax(tokens_nostop):
     freq_dist = nltk.FreqDist(tokens_nostop)
     rarewords = freq_dist.hapaxes()
     nohapax = [word for word in tokens_nostop if word not in rarewords]
-    #print("Hapax Legomena removed... OK")
     return nohapax
 
 #filter by freqlist

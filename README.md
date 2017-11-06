@@ -38,9 +38,6 @@ myhapaxlist=hapax(doc_clean)
 #Filter freqlist
 myfreqlist=freqlist(myhapaxlist)
 
-
-len(doc_clean)
-len(myhapaxlist)
-len(myfreqlist)
+#Print plot
 freqplot(doc_clean)
 ```
