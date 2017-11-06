@@ -24,16 +24,23 @@ sudo python -c "import nltk; nltk.download('stopwords')"
 A simple use of the library
 
 ```py
-from keyword_extractor import cleaner
+from keyword_extractor import cleaner, hapax, freqlist, freqplot
 
-docs=[
-    "Ancora allarme dopo la tensione di ieri con il test della bomba a idrogeno da parte della Corea del Nord. La Corea del Sud ha - infatti - registrato segnali relativi alla preparazione di un nuovo lancio di missile balistico.",
-    "E'stato catturato in Uruguay il boss della 'ndrangheta Rocco Morabito, latitante da 25 anni. Morabito è stato preso in un hotel a Montevideo ma viveva nella località di Punta del Este.",
-    ]
-	
+List = open("MOTORI.txt").readlines()
 doc_clean=[]
-for doc in docs:
-    doc_clean.append(cleaner(doc))
 
-print doc_clean
+#Extract keywords
+for doc in List:
+    doc_clean.extend(cleaner(doc))
+
+#Remove Hapax
+myhapaxlist=hapax(doc_clean)
+#Filter freqlist
+myfreqlist=freqlist(myhapaxlist)
+
+
+len(doc_clean)
+len(myhapaxlist)
+len(myfreqlist)
+freqplot(doc_clean)
 ```
