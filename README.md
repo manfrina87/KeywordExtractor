@@ -39,5 +39,5 @@ myhapaxlist=hapax(doc_clean)
 myfreqlist=freqlist(myhapaxlist)
 
 #Print plot
-freqplot(doc_clean)
+freqplot(myhapaxlist)
 ```

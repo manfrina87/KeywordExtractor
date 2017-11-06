@@ -66,6 +66,6 @@ def freqlist(doc_clean):
 def freqplot(words):
     freq_dist_nltk = nltk.FreqDist(words)
     freq_dist_nltk.plot(FREQLIST_PLOT_NUM, cumulative=True)
-    pyplot.draw()
+    pyplot.tight_layout()
     pyplot.savefig(FREQLIST_PLOT_FILENAME)
     
