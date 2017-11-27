@@ -3,11 +3,11 @@
 
 import re
 import nltk
-from nltk.corpus import stopwords 
+from nltk.corpus import stopwords
 from nltk.stem.wordnet import WordNetLemmatizer
 import string
 from matplotlib import pyplot
- 
+
 from treetagger_python2 import *
 from config_constants import *
 
@@ -39,7 +39,7 @@ def cleaner(text, new_stops=NEW_STOPS, pos_filter=POS_FILTER):
     mystop=stopword(new_stops)
     
     for wd in sentence_splitter(text):
-        regex = re.compile(pos_filter)  #POS filter
+        regex = re.compile(pos_filter, re.UNICODE)  #POS filter
         if re.match(regex, wd[1]) is not None:
             if wd[2] != '<unknown>':            #lemmas instead of words
                 doc_clean.append(wd[2])
